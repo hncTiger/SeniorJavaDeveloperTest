@@ -23,7 +23,7 @@ public class WeatherRepsitoryImpl implements WeatherRepsitory{
 	public JSONObject getWeatherByCity(String cityName){
         String result =null;
         Map<String,String> params = new HashMap<String,String>();//请求参数
-            params.put("cityname",cityName);//要查询的城市，如：温州、上海、北京
+            params.put("city",cityName);//要查询的城市，如：温州、上海、北京
             params.put("key", key);//应用APPKEY(应用详细页查询)
             params.put("dtype", "");//返回数据的格式,xml或json，默认json
   

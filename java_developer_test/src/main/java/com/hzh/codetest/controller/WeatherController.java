@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hzh.codetest.eneity.Weather;
 import com.hzh.codetest.respone.converter.ResultWrapper;
 import com.hzh.codetest.service.WeatherService;
 
@@ -20,8 +21,10 @@ public class WeatherController {
     @RequestMapping(value = "/weather", method = RequestMethod.GET)
     public ResponseEntity<ResultWrapper> getCityWeather(
         @RequestParam(value = "cityName") String cityName) {
-        return ResponseEntity
-            .ok(new ResultWrapper(weatherService.findCityWeather(cityName)));
+        
+    	Weather weather = weatherService.findCityWeather(cityName);
+    	return ResponseEntity.ok(new ResultWrapper(weather));
+    	
     }
     
     //PlanB
