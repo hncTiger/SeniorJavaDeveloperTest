@@ -13,9 +13,9 @@ import org.springframework.util.CollectionUtils;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.hzh.codetest.eneity.Weather;
-import com.hzh.codetest.eneity.WeatherByCity;
-import com.hzh.codetest.eneity.WeatherByCity.ResultBean.FutureBean;
+import com.hzh.codetest.entity.Weather;
+import com.hzh.codetest.entity.WeatherByCity;
+import com.hzh.codetest.entity.WeatherByCity.ResultBean.FutureBean;
 import com.hzh.codetest.repository.WeatherRepsitory;
 import com.hzh.codetest.service.WeatherService;
 
