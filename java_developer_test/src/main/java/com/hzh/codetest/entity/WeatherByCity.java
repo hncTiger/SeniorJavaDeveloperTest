@@ -1,4 +1,4 @@
-package com.hzh.codetest.eneity;
+package com.hzh.codetest.entity;
 
 import java.util.List;
 

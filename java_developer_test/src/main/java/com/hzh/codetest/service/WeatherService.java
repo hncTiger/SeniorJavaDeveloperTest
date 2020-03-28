@@ -1,6 +1,6 @@
 package com.hzh.codetest.service;
 
-import com.hzh.codetest.eneity.Weather;
+import com.hzh.codetest.entity.Weather;
 
 public interface WeatherService {
 	
