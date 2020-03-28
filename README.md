@@ -6,9 +6,9 @@
 
 [项目结构简介]：StringBoot 2.0.2.RELEASE
 
-[测试DEMO]：
-http://localhost:8080/codetest/weather?cityName=%E5%A4%A7%E8%BF%9E
-http://localhost:8080/codetest/weather?cityName=大连
+[测试DEMO]： <br>
+http://localhost:8080/codetest/weather?cityName=%E5%A4%A7%E8%BF%9E <br>
+http://localhost:8080/codetest/weather?cityName=大连 <br>
 http://localhost:8080/codetest/weather?cityName=沈阳
 
 [作者列表]：hzh
