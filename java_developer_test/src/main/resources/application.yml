@@ -1,0 +1,9 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /codetest
+
+#调用天气接口所用参数
+weatherapi:
+  url: http://apis.juhe.cn/simpleWeather/query
+  key: 419b432029df454f0a597a86b008ffd7
