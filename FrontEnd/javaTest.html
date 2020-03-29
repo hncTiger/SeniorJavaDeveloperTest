@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>Get Current Weather </title>
+<script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+
+<button id="btn">查询天气</button>
+
+<table width="200" border="1"> 
+  <tbody>
+    <tr>
+      <td>City</td>
+      <td><select id="c">
+      	<option id="c1" value ="大连">Sydney</option>
+  	  	<option id="c2" value ="沈阳">Melbourne</option>
+      	<option id="c3" value="北京">Wollongong</option>
+	  </select></td>
+    </tr>
+    <tr>
+      <td>Updated time</td>
+      <td><p id="updatedTime"></p></td>
+    </tr>
+    <tr>
+      <td>Weather</td>
+      <td><p id="weather"></p></td>
+    </tr>
+    <tr>
+      <td>Temperature</td>
+      <td><p id="temperature"></p></td>
+    </tr>
+    <tr>
+      <td>Wind</td>
+      <td><p id="wind"></p></td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+	$(function(){
+		$("#btn").on("click", function(){
+
+			$.ajax({
+                    url: 'http://localhost:8080/codetest/weather',    
+                    type: 'get',
+                    dataType: 'json',
+                    data:{    
+                        "cityName":$("#c option:selected").val()
+                    },
+					success : function(data) {
+
+						$("#updatedTime").text(data.data.updatedTime);
+						$("#weather").text(data.data.weather);
+						$("#temperature").text(data.data.temperature);
+						$("#wind").text(data.data.wind);
+
+					},
+				   	error : function(json) {
+						alert("Wrong!");
+					}
+                });
+		});
+	})
+</script>
+</body>
+</html>
