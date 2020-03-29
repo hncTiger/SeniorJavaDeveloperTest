@@ -20,3 +20,18 @@ http://localhost:8080/codetest/weather?cityName=沈阳
 [联系方式]：-
 
 # Code Test-FrontEnd Developer
+[功能描述]：
+
+[开发环境]：
+
+[项目结构简介]：
+
+[测试DEMO]： 
+
+[作者列表]：hzh
+
+[更新链接]：none
+
+[历史版本]：none
+
+[联系方式]：-
