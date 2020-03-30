@@ -1,0 +1,90 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+<metacharset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pets</title>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+  <div id="app">
+<h2>{{msg}}</h2>
+    <h2>Male</h2>
+
+    <ul>
+    <li v-for="item,index in owners" :key="index" v-if="item.gender === 'Male'"><b>{{item.name}}</b>
+      <ul>
+        <li v-for="p in item.pets">{{p.name}}</li>
+      </ul>
+    </li>
+    </ul>
+    <h2>Female</h2>
+    <ul>
+    <li v-for="item,index in owners" :key="index" v-if="item.gender === 'Female'"><b>{{item.name}}</b>
+      <ul>
+        <li v-for="p in item.pets">{{p.name}}</li>
+      </ul>
+    </li>
+    </ul>
+  </div>
+<script>
+new Vue({
+  el:'#app',
+  data () {
+    return {
+      msg: 'Code Test-FrontEnd Developer[3264] pets',
+      owners:null
+
+    }
+  },
+  mounted(){
+    this.loadData();
+  },
+methods:{
+  loadData:function(){
+    axios.get('http://5c92dbfae7b1a00014078e61.mockapi.io/owners')
+    .then(res => {
+    console.log(res);
+      this.owners = res.data;
+      console.log(this.owners);
+      var petList = [];
+      this.owners.forEach(owner =>{
+          petList = owner.pets;
+          console.log(petList);
+          if (petList != null){
+            petList.forEach((pet,index) => {
+              if(pet.type != 'Cat'){
+                petList.splice(index,1);
+
+              }
+            })
+          }
+          if (petList != null){
+            this.sortByCat(petList,'name');
+          }
+
+
+      })
+
+    })
+  },
+  sortByCat:function(array,key){
+    return array.sort(function(a,b){
+      var x = a[key];
+      var y = b[key];
+      return ((x<y)?-1:((x<y)?1:0));
+    })
+  }
+
+}
+
+})
+</script>
+
+</body>
+
+</html>
+
