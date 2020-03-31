@@ -11,7 +11,7 @@ http://47.92.164.155/
 [项目结构简介]：StringBoot 2.0.2.RELEASE
 
 [测试DEMO]： <br>
-http://47.92.164.155/javaTest.html
+http://47.92.164.155/javaTest.html <br>
 http://47.92.164.155:8080/codetest/weather?cityName=%E5%A4%A7%E8%BF%9E <br>
 http://47.92.164.155:8080/codetest/weather?cityName=大连 <br>
 
@@ -30,7 +30,7 @@ http://47.92.164.155:8080/codetest/weather?cityName=大连 <br>
 
 [项目结构简介]： Vue.js
 
-[测试DEMO]： 
+[测试DEMO]： <br>
 http://47.92.164.155/pet.html
 
 [作者列表]：hzh
